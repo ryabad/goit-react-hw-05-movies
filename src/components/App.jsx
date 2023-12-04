@@ -20,7 +20,7 @@ export const App = () => {
           <Route path="reviews" element={<Reviews />} />
         </Route>
       </Route>
-      <Route path="*" element={<div>Page doesnt exist!</div>} />
+      <Route path="*" element={<div>Page doesn't exist!</div>} />
     </Routes>
   );
 };

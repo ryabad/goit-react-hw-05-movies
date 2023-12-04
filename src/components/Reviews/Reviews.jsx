@@ -1,5 +1,4 @@
 import { getMovieReviews } from 'common/themoviedbService';
-import { ReviewsList } from 'components/ReviewsList/ReviewsList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -33,7 +32,13 @@ export const Reviews = () => {
         ) : (
           <div>
             <ul>
-              <ReviewsList data={reviews} />
+              {reviews.map(el => (
+                <li key={el.id}>
+                  <h3>Author: {el.author}</h3>
+                  <p>Username: {el.author_details.username}</p>
+                  <p>{el.content}</p>
+                </li>
+              ))}
             </ul>
           </div>
         ))}
