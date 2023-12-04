@@ -9,9 +9,9 @@ const options = {
   },
 };
 
-export function getTrending() {
+export function getTrending(type) {
   return axios(
-    'https://api.themoviedb.org/3/trending/all/day?language=en-US',
+    `https://api.themoviedb.org/3/trending/all/${type}?language=en-US`,
     options
   );
 }
